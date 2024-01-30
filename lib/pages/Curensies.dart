@@ -15,10 +15,10 @@ class _CuresiesState extends State<Curesies> {
     return GetBuilder<HomeController>(
       builder: (controller) {
         return Scaffold(
-          appBar: AppBar(title: Text("Valyuta kurslari ")),
+          appBar: AppBar(title: const Text("Valyuta kurslari ")),
           body: SingleChildScrollView(
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: controller.loading
                   ? const Center(child: CircularProgressIndicator())
                   : Column(
@@ -41,7 +41,7 @@ class _CuresiesState extends State<Curesies> {
                           subtitle: Text(item['Date']),
                           trailing: Text(
                             item['Rate'],
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.w600),
                           ),
                         );

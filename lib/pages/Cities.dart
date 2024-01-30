@@ -24,7 +24,7 @@ class _CitiesState extends State<Cities> {
             trailing: const Icon(Icons.arrow_right, size: 30),
             onTap: () {
               controller.selectCity = controller.cities[index];
-              controller.fetchPrayerTimes;
+              controller.fetchPrayerTimes();
             },
           );
         }),

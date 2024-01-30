@@ -36,8 +36,7 @@ class HomeController extends GetxController {
     "Namangan",
     "Buxoro",
   ];
-
-  Map<String, dynamic> prayrTime = {};
+  Map<String, dynamic> prayerTimes = {};
   String selectCity = '';
 
   fetchPrayerTimes() async {
@@ -45,8 +44,8 @@ class HomeController extends GetxController {
       loading = true;
       update();
       var res = await http
-          .get('https://islomapi.uz/api/present/day?region=$selectCity');
-      prayrTime = res.data;
+          .get("https://islomapi.uz/api/present/day?region=$selectCity");
+      prayerTimes = res.data;
       Get.to(() => const PrayerTime());
     } catch (err) {
       print(err);
