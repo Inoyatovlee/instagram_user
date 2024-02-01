@@ -23,7 +23,7 @@ class HomeController extends GetxController {
       currensies = res.data;
     } catch (err) {
       print(err);
-    } finally {
+    } finally { 
       loading = false;
       update();
     }
@@ -31,7 +31,7 @@ class HomeController extends GetxController {
 
   List<String> cities = [
     "Toshkent",
-    "Fargona",
+    "Farg'ona",
     "Andijon",
     "Namangan",
     "Buxoro",
