@@ -22,8 +22,8 @@ class HomeController extends GetxController {
       var res = await http.get('https://cbu.uz/uz/arkhiv-kursov-valyut/json/');
       currensies = res.data;
     } catch (err) {
-      print(err);
-    } finally { 
+      Get.snackbar("Xatolik", "Ma'lumot topilmadi");
+    } finally {
       loading = false;
       update();
     }
@@ -35,6 +35,16 @@ class HomeController extends GetxController {
     "Andijon",
     "Namangan",
     "Buxoro",
+    "Jizzax",
+    "Urganch",
+    "Navoiy",
+    "Qarshi",
+    "Nukus",
+    "Samarqand",
+    "Guliston",
+    "Termiz",
+    "Xiva",
+    "Qo'qon",
   ];
   Map<String, dynamic> prayerTimes = {};
   String selectCity = '';
@@ -48,7 +58,7 @@ class HomeController extends GetxController {
       prayerTimes = res.data;
       Get.to(() => const PrayerTime());
     } catch (err) {
-      print(err);
+      Get.snackbar("Xatolik", "Ma'lumot topilmadi");
     } finally {
       loading = false;
       update();
