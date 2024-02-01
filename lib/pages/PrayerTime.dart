@@ -26,24 +26,37 @@ class _PrayerTimeState extends State<PrayerTime> {
   }
 
 //bu funksiya filter qilib beradi yani taxtni o'zgartirib beradi
-  String filterText(String key) {
-    switch (key) {
-      case "tong_saharlik":
-        return ('Bomdod nomozi');
-      case "quyosh":
-        return ('Quyosh ');
-      case "peshin":
-        return ('Peshin nomozi');
-      case "asr":
-        return ('Asr nomozi');
-      case "shom_iftor":
-        return ('Shom nomozis');
-      case "hufton":
-        return ('Hufton nomozi');
+  // String filterText(String key) {
+  //   switch (key) {
+  //     case "tong_saharlik":
+  //       return ('Bomdod nomozi');
+  //     case "quyosh":
+  //       return ('Quyosh ');
+  //     case "peshin":
+  //       return ('Peshin nomozi');
+  //     case "asr":
+  //       return ('Asr nomozi');
+  //     case "shom_iftor":
+  //       return ('Shom nomozis');
+  //     case "hufton":
+  //       return ('Hufton nomozi');
 
-      default:
-        return "";
-    }
+  //     default:
+  //       return "";
+  //   }
+  // }
+// keys o'zgaruvchining nomi
+  Map<String, dynamic> keys = {
+    "tong_saharlik": "Bomdod nomozi",
+    "quyosh": "Quyosh",
+    "peshin": "Peshin nomozi",
+    "asr": "Asr nomozi",
+    "shom_iftor": "Shom nomozi",
+    "hufton": "Hufton nomozi",
+  };
+
+  test(String key) {
+    return keys[key] ?? '';
   }
 
   @override
@@ -77,7 +90,7 @@ class _PrayerTimeState extends State<PrayerTime> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        filterText(
+                        test(
                           times[index]['vaqt'],
                         ),
                         style: const TextStyle(
