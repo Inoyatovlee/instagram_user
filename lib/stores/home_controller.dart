@@ -22,7 +22,7 @@ class HomeController extends GetxController {
       var res = await http.get('https://cbu.uz/uz/arkhiv-kursov-valyut/json/');
       currensies = res.data;
     } catch (err) {
-      Get.snackbar("Xatolik", "Ma'lumot topilmadi");
+      print(err);
     } finally {
       loading = false;
       update();
