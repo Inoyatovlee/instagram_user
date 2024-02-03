@@ -48,6 +48,17 @@ class _HomePageState extends State<HomePage> {
                   Get.to(const Cities());
                 },
               ),
+              HomeButton(
+                icon: Icons.attach_money,
+                text: "Mahsulotlar ",
+                subtitle: "Eng arzon va hamyonmob mahsulotlar siz uchun",
+                image: AppImages.momo,
+                colors: [AppColors.pink, AppColors.yellow],
+                textcolor: Colors.white,
+                onTap: () {
+                  Get.to(const Products());
+                },
+              ),
             ],
           ),
         ),
