@@ -33,14 +33,14 @@ class _CuresiesState extends State<Curesies> {
                                       fontSize: 18,
                                       fontWeight: FontWeight.w600),
                                   children: [
-                                    TextSpan(text: item['Nominal' + " "]),
-                                    TextSpan(text: item['CcyNm_UZC']),
+                                    TextSpan(text: "${item.Nominal} "),
+                                    TextSpan(text: item.CcyNm_UZ),
                                   ])),
                             ],
                           ),
-                          subtitle: Text(item['Date']),
+                          subtitle: Text(item.Date),
                           trailing: Text(
-                            item['Rate'],
+                            item.Rate,
                             style: const TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.w600),
                           ),

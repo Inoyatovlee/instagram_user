@@ -21,8 +21,7 @@ class ProductsModel {
       image: json['image']);
 
   //20 ta listni aylanib chiqib ^ shunaqa ma'lumotlarni bersin
-
-  List<ProductsModel> productModelFromJson(List list) =>
-      List<ProductsModel>.from(
-          list.map((item) => ProductsModel.fromJson(item)));
 }
+
+List<ProductsModel> productModelFromJson(List list) =>
+    List<ProductsModel>.from(list.map((item) => ProductsModel.fromJson(item)));
