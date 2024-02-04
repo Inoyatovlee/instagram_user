@@ -8,3 +8,8 @@ export 'package:uneversap_app/config/images.dart';
 export 'package:uneversap_app/config/colors.dart';
 export 'package:uneversap_app/pages/PrayerTime.dart';
 export 'package:uneversap_app/pages/Cities.dart';
+export 'package:uneversap_app/pages/Products.dart';
+export 'package:uneversap_app/stores/products_controller.dart';
+export 'package:uneversap_app/models/products_model.dart';
+export 'package:uneversap_app/models/currensies_model.dart';
+export 'package:uneversap_app/models/prayer_time_model.dart';

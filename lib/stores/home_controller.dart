@@ -4,7 +4,7 @@ import 'package:uneversap_app/config/Imports.dart';
 class HomeController extends GetxController {
   Dio http = Dio();
 
-  List currensies = [];
+  List<CurrenciesModel> currensies = [];
 
   bool loading = false;
 
@@ -20,7 +20,7 @@ class HomeController extends GetxController {
       update();
       // await Future.delayed(Duration(seconds: 5));   /vqatni sekinlashtiradi/
       var res = await http.get('https://cbu.uz/uz/arkhiv-kursov-valyut/json/');
-      currensies = res.data;
+      currensies = cureniesFromMap(res.data);
     } catch (err) {
       print(err);
     } finally {
@@ -46,7 +46,7 @@ class HomeController extends GetxController {
     "Xiva",
     "Qo'qon",
   ];
-  Map<String, dynamic> prayerTimes = {};
+  late PrayerTimeModel prayerTimes;
   String selectCity = '';
 
   fetchPrayerTimes() async {
@@ -55,7 +55,7 @@ class HomeController extends GetxController {
       update();
       var res = await http
           .get("https://islomapi.uz/api/present/day?region=$selectCity");
-      prayerTimes = res.data;
+      prayerTimes = PrayerTimeModel.fromJson(res.data);
       Get.to(() => const PrayerTime());
     } catch (err) {
       Get.snackbar("Xatolik", "Ma'lumot topilmadi");

@@ -21,7 +21,7 @@ class _PrayerTimeState extends State<PrayerTime> {
 //page ishga tushurishi bilan ishlatib yuboradi
   @override
   void initState() {
-    filterTime(controller.prayerTimes['times']);
+    filterTime(controller.prayerTimes.times);
     super.initState();
   }
 
@@ -71,12 +71,12 @@ class _PrayerTimeState extends State<PrayerTime> {
           children: [
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
               Text(
-                controller.prayerTimes['date'],
+                controller.prayerTimes.date,
                 style:
                     const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
               Text(
-                controller.prayerTimes['weekday'],
+                controller.prayerTimes.weekday,
                 style:
                     const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
