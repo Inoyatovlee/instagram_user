@@ -13,3 +13,4 @@ export 'package:uneversap_app/stores/products_controller.dart';
 export 'package:uneversap_app/models/products_model.dart';
 export 'package:uneversap_app/models/currensies_model.dart';
 export 'package:uneversap_app/models/prayer_time_model.dart';
+export 'package:cached_network_image/cached_network_image.dart';

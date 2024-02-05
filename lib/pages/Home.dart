@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                 textcolor: Colors.white,
                 onTap: () {
                   controller.fetchCurresies();
-                  Get.to(const Curesies());
+                  Get.to(() => const Curesies());
                 },
               ),
               HomeButton(
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
                 colors: [AppColors.red, AppColors.pink],
                 textcolor: Colors.white,
                 onTap: () {
-                  Get.to(const Cities());
+                  Get.to(() => const Cities());
                 },
               ),
               HomeButton(
@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
                 colors: [AppColors.pink, AppColors.yellow],
                 textcolor: Colors.white,
                 onTap: () {
-                  Get.to(const Products());
+                  Get.to(() => const Products());
                 },
               ),
             ],
