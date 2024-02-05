@@ -1,3 +1,4 @@
+import 'package:insta_image_viewer/insta_image_viewer.dart';
 import 'package:uneversap_app/config/Imports.dart';
 
 class Products extends StatefulWidget {
@@ -23,14 +24,16 @@ class _ProductsState extends State<Products> {
             padding: const EdgeInsetsDirectional.symmetric(horizontal: 16),
             child: controller.loading
                 ? const Center(child: CircularProgressIndicator())
-                : Wrap(
-                    spacing: 5,
-                    runSpacing: 5,
-                    children:
-                        List.generate(controller.products.length, (index) {
-                      var item = controller.products[index];
-                      return ProductCatd(product: item);
-                    }),
+                : SingleChildScrollView(
+                    child: Wrap(
+                      spacing: 5,
+                      runSpacing: 5,
+                      children:
+                          List.generate(controller.products.length, (index) {
+                        var item = controller.products[index];
+                        return ProductCatd(product: item);
+                      }),
+                    ),
                   ),
           ),
         );
@@ -54,12 +57,14 @@ class ProductCatd extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Container(
-            height: 200,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: CachedNetworkImageProvider(product.image),
-                    fit: BoxFit.cover)),
+          InstaImageViewer(
+            child: Container(
+              height: 200,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: CachedNetworkImageProvider(product.image),
+                      fit: BoxFit.cover)),
+            ),
           ),
           Text(
             product.title,
