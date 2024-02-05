@@ -9,9 +9,10 @@ class ProductsController extends GetxController {
   List<ProductsModel> products = [];
 
   fetchProducts() async {
+    loading = true;
+    update();
     try {
-      loading = true;
-      update();
+      //await Future.delayed(const Duration(seconds: 3)); //suniy sejinlashish
       var res = await http.get('https://fakestoreapi.com/products');
       products = productModelFromJson(res.data);
     } catch (err) {
