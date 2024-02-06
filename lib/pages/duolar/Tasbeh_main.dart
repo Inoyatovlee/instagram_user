@@ -1,6 +1,4 @@
 import 'package:uneversap_app/config/Imports.dart';
-import 'package:uneversap_app/pages/duolar/Tasbeh.dart';
-import 'package:uneversap_app/stores/tasbeh_controller.dart';
 
 class TasbehMain extends StatefulWidget {
   const TasbehMain({super.key});
@@ -17,16 +15,18 @@ class _TasbehMainState extends State<TasbehMain> {
       appBar: AppBar(
         title: const Text("Elektron tasbeh"),
       ),
-      body: Container(
-        constraints: const BoxConstraints(maxWidth: 500),
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          children: [
-            //reja:
-            TasbehButton(title: "Subhanalloh"),
-            TasbehButton(title: "Alhamdulillah"),
-            TasbehButton(title: "Allohu akbar"),
-          ],
+      body: Center(
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 500),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              //reja:
+              TasbehButton(title: "Subhanalloh"),
+              TasbehButton(title: "Alhamdulillah"),
+              TasbehButton(title: "Allohu akbar"),
+            ],
+          ),
         ),
       ),
     );
@@ -51,7 +51,7 @@ class TasbehButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 10),
         width: double.maxFinite,
         decoration: BoxDecoration(
-            color: AppColors.pink, borderRadius: BorderRadius.circular(10)),
+            color: AppColors.wq, borderRadius: BorderRadius.circular(10)),
         child: Text(
           title,
           style: const TextStyle(
