@@ -23,10 +23,25 @@ class TasbehController extends GetxController {
       "count": 0
     },
   };
-
+//O ga raqam qo'shish
   addCount() {
     duolar[selected]['count']++;
     GetStorage().write(selected, duolar[selected]['count']);
+    update();
+  }
+
+//check tekshirish
+  check() {
+    int count = GetStorage().read(selected) ?? 0;
+    duolar[selected]['count'] = count;
+    update();
+  }
+
+// 0 qilib qo'yish  /// if 0 dan kattaligiga shart berish
+  reset() {
+    if (duolar[selected]['count'] == 0) return;
+    GetStorage().remove(selected);
+    duolar[selected]['count'] = 0;
     update();
   }
 }

@@ -12,6 +12,7 @@ class _TasbehState extends State<Tasbeh> {
   @override
   void initState() {
     controller.selected = Get.arguments;
+    controller.check();
     super.initState();
   }
 
@@ -54,13 +55,17 @@ class _TasbehState extends State<Tasbeh> {
                     const SizedBox(height: 50),
                     TasbehhButton(
                         color: Colors.green,
-                        text: "Hisoblamoq",
+                        text: "Hisoblash",
                         onTap: () {
                           controller.addCount();
                         }),
                     const SizedBox(height: 24),
                     TasbehhButton(
-                        color: Colors.red, text: "Qayta o'qish", onTap: () {}),
+                        color: Colors.red,
+                        text: "Qayta o'qish",
+                        onTap: () {
+                          controller.reset();
+                        }),
                   ],
                 ),
               ),
