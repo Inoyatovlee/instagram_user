@@ -6,4 +6,5 @@ class AppImages {
   static String ne1 = 'assets/images/ne1.png';
   static String daw = 'assets/images/daw.png';
   static String mosque = 'assets/images/mosque.png';
+  static String icon = 'assets/images/icon.png';
 }
