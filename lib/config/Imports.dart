@@ -17,3 +17,4 @@ export 'package:cached_network_image/cached_network_image.dart';
 export 'package:uneversap_app/pages/duolar/Tasbeh_main.dart';
 export 'package:uneversap_app/stores/tasbeh_controller.dart';
 export 'package:uneversap_app/pages/duolar/Tasbeh.dart';
+export 'package:get_storage/get_storage.dart';

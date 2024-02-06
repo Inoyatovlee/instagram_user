@@ -45,8 +45,22 @@ class _TasbehState extends State<Tasbeh> {
                             colors: [AppColors.blue, AppColors.pink]),
                         borderRadius: BorderRadius.circular(1000),
                       ),
-                      child: const Text("0", style: TextStyle(fontSize: 100)),
+                      child: Text(
+                          controller.duolar[controller.selected]['count']
+                              .toString(),
+                          style: const TextStyle(
+                              fontSize: 100, color: Colors.white)),
                     ),
+                    const SizedBox(height: 50),
+                    TasbehhButton(
+                        color: Colors.green,
+                        text: "Hisoblamoq",
+                        onTap: () {
+                          controller.addCount();
+                        }),
+                    const SizedBox(height: 24),
+                    TasbehhButton(
+                        color: Colors.red, text: "Qayta o'qish", onTap: () {}),
                   ],
                 ),
               ),
@@ -54,6 +68,37 @@ class _TasbehState extends State<Tasbeh> {
           ),
         );
       },
+    );
+  }
+}
+
+class TasbehhButton extends StatelessWidget {
+  String text;
+  Color color;
+  Function onTap;
+  TasbehhButton({
+    super.key,
+    required this.color,
+    required this.text,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        onTap();
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 8),
+        decoration: BoxDecoration(
+            color: color, borderRadius: BorderRadius.circular(30)),
+        child: Text(text,
+            style: const TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w700,
+                color: Colors.white)),
+      ),
     );
   }
 }
