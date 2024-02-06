@@ -16,6 +16,7 @@ class _TasbehState extends State<Tasbeh> {
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
     return GetBuilder<TasbehController>(
       builder: (controller) {
@@ -33,25 +34,42 @@ class _TasbehState extends State<Tasbeh> {
                         style: const TextStyle(
                             fontSize: 24, fontWeight: FontWeight.w600)),
                     Text(
-                      "${"'Ma'nosi: " + controller.duolar[controller.selected]['text']}'",
-                      style: const TextStyle(fontSize: 18),
-                      textAlign: TextAlign.center,
-                    ),
+                        "${"'Ma'nosi: " + controller.duolar[controller.selected]['text']}'",
+                        style: const TextStyle(fontSize: 18),
+                        textAlign: TextAlign.center),
                     const SizedBox(height: 20),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 100, vertical: 60),
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            colors: [AppColors.blue, AppColors.pink]),
-                        borderRadius: BorderRadius.circular(1000),
-                      ),
-                      child: Text(
-                          controller.duolar[controller.selected]['count']
-                              .toString(),
-                          style: const TextStyle(
-                              fontSize: 100, color: Colors.white)),
+                    Stack(
+                      children: [
+                        Image.asset(AppImages.tas,
+                            width: 340, fit: BoxFit.cover),
+                        Positioned.fill(
+                          child: Align(
+                              alignment: Alignment.center,
+                              child: Text(
+                                controller.duolar[controller.selected]['count']
+                                    .toString(),
+                                style: const TextStyle(
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.amber),
+                              )),
+                        ),
+                      ],
                     ),
+                    // Container(
+                    //   padding: const EdgeInsets.symmetric(
+                    //       horizontal: 100, vertical: 60),
+                    //   decoration: BoxDecoration(
+                    //     gradient: LinearGradient(
+                    //         colors: [AppColors.blue, AppColors.pink]),
+                    //     borderRadius: BorderRadius.circular(1000),
+                    //   ),
+                    //   child: Text(
+                    //       controller.duolar[controller.selected]['count']
+                    //           .toString(),
+                    //       style: const TextStyle(
+                    //           fontSize: 100, color: Colors.white)),
+                    // ),
                     const SizedBox(height: 50),
                     TasbehhButton(
                         color: Colors.green,

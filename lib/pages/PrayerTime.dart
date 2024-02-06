@@ -29,17 +29,17 @@ class _PrayerTimeState extends State<PrayerTime> {
   // String filterText(String key) {
   //   switch (key) {
   //     case "tong_saharlik":
-  //       return ('Bomdod nomozi');
+  //       return ('Bomdod namozi');
   //     case "quyosh":
   //       return ('Quyosh ');
   //     case "peshin":
-  //       return ('Peshin nomozi');
+  //       return ('Peshin namozi');
   //     case "asr":
-  //       return ('Asr nomozi');
+  //       return ('Asr namozi');
   //     case "shom_iftor":
-  //       return ('Shom nomozis');
+  //       return ('Shom namozis');
   //     case "hufton":
-  //       return ('Hufton nomozi');
+  //       return ('Hufton namozi');
 
   //     default:
   //       return "";
@@ -47,12 +47,12 @@ class _PrayerTimeState extends State<PrayerTime> {
   // }
 // keys o'zgaruvchining nomi
   Map<String, dynamic> keys = {
-    "tong_saharlik": "Bomdod nomozi",
+    "tong_saharlik": "Bomdod namozi",
     "quyosh": "Quyosh",
-    "peshin": "Peshin nomozi",
-    "asr": "Asr nomozi",
-    "shom_iftor": "Shom nomozi",
-    "hufton": "Hufton nomozi",
+    "peshin": "Peshin namozi",
+    "asr": "Asr namozi",
+    "shom_iftor": "Shom namozi",
+    "hufton": "Hufton namozi",
   };
 
   test(String key) {

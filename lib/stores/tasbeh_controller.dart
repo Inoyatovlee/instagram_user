@@ -22,6 +22,12 @@ class TasbehController extends GetxController {
       "text": "Alloh buyuk",
       "count": 0
     },
+    "Astag'firulloh": {
+      "id": 1,
+      "title": "Astag'firulloh",
+      "text": "Alloh kechirsin",
+      "count": 0
+    },
   };
 //O ga raqam qo'shish
   addCount() {

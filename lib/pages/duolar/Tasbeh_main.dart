@@ -25,6 +25,7 @@ class _TasbehMainState extends State<TasbehMain> {
               TasbehButton(title: "Subhanalloh"),
               TasbehButton(title: "Alhamdulillah"),
               TasbehButton(title: "Allohu akbar"),
+              TasbehButton(title: "Astag'firulloh"),
             ],
           ),
         ),
@@ -51,7 +52,7 @@ class TasbehButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 10),
         width: double.maxFinite,
         decoration: BoxDecoration(
-            color: AppColors.wq, borderRadius: BorderRadius.circular(10)),
+            color: AppColors.blue, borderRadius: BorderRadius.circular(10)),
         child: Text(
           title,
           style: const TextStyle(

@@ -18,20 +18,31 @@ class _HomePageState extends State<HomePage> {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
             constraints: const BoxConstraints(maxWidth: 500),
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Color.fromARGB(255, 118, 177, 219),
+                    Color.fromARGB(189, 32, 113, 178)
+                  ]),
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 24),
-                const Text("Help you",
-                    style:
-                        TextStyle(fontSize: 24, fontWeight: FontWeight.w700)),
+                const Text("Hammasi bittada",
+                    style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white)),
                 const SizedBox(height: 24),
                 HomeButton(
                   icon: Icons.attach_money,
                   text: "Namoz vaqtlari ",
                   subtitle: "Besh vaqt namoz vaqitlarini bilish uchun kiring",
-                  image: AppImages.momo,
-                  colors: [AppColors.red, AppColors.pink],
+                  image: AppImages.mosque,
+                  colors: [AppColors.blue, AppColors.pink],
                   textcolor: Colors.white,
                   onTap: () {
                     Get.to(() => const Cities());
@@ -41,8 +52,8 @@ class _HomePageState extends State<HomePage> {
                   icon: Icons.attach_money,
                   text: "Elektron tasbeh ",
                   subtitle: "Har kuni zikr qilishni unnutmang",
-                  image: AppImages.momo,
-                  colors: [AppColors.violet, AppColors.pink],
+                  image: AppImages.pra,
+                  colors: [AppColors.blue, AppColors.pink],
                   textcolor: Colors.white,
                   onTap: () {
                     Get.to(() => const TasbehMain());
@@ -65,8 +76,8 @@ class _HomePageState extends State<HomePage> {
                   icon: Icons.attach_money,
                   text: "Mahsulotlar ",
                   subtitle: "Eng arzon va hamyonmob mahsulotlar siz uchun",
-                  image: AppImages.momo,
-                  colors: [AppColors.pink, AppColors.yellow],
+                  image: AppImages.daw,
+                  colors: [AppColors.blue, AppColors.pink],
                   textcolor: Colors.white,
                   onTap: () {
                     Get.to(() => const Products());
