@@ -18,3 +18,5 @@ export 'package:uneversap_app/pages/duolar/Tasbeh_main.dart';
 export 'package:uneversap_app/stores/tasbeh_controller.dart';
 export 'package:uneversap_app/pages/duolar/Tasbeh.dart';
 export 'package:get_storage/get_storage.dart';
+export 'package:insta_image_viewer/insta_image_viewer.dart';
+export 'package:uneversap_app/components/home/ProductCard.dart';
