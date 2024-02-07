@@ -51,12 +51,13 @@ class HomeController extends GetxController {
 
   fetchPrayerTimes() async {
     try {
+      Get.to(() => const PrayerTime());
       loading = true;
       update();
+      await Future.delayed(const Duration(seconds: 3));
       var res = await http
           .get("https://islomapi.uz/api/present/day?region=$selectCity");
       prayerTimes = PrayerTimeModel.fromJson(res.data);
-      Get.to(() => const PrayerTime());
     } catch (err) {
       Get.snackbar("Xatolik", "Ma'lumot topilmadi");
     } finally {
