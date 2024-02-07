@@ -46,24 +46,48 @@ class HomeController extends GetxController {
     "Xiva",
     "Qo'qon",
   ];
-  late PrayerTimeModel prayerTimes;
+  PrayerTimeModel? prayerTimes;
   String selectCity = '';
 
   fetchPrayerTimes() async {
     try {
-      Get.to(() => const PrayerTime());
+      times = [];
       loading = true;
       update();
-      await Future.delayed(const Duration(seconds: 3));
+      Get.to(() => const PrayerTime());
+      // await Future.delayed(const Duration(seconds: 3));
       var res = await http
           .get("https://islomapi.uz/api/present/day?region=$selectCity");
       prayerTimes = PrayerTimeModel.fromJson(res.data);
+      filterTime(prayerTimes!.times);
     } catch (err) {
-      Get.snackbar("Xatolik", "Ma'lumot topilmadi");
+      Get.snackbar("Xatolik", "Internetsiz bu ma'lumotlar topilmaydi");
     } finally {
       loading = false;
       update();
     }
+  }
+
+  Map<String, dynamic> keys = {
+    "tong_saharlik": "Bomdod namozi",
+    "quyosh": "Quyosh",
+    "peshin": "Peshin namozi",
+    "asr": "Asr namozi",
+    "shom_iftor": "Shom namozi",
+    "hufton": "Hufton namozi",
+  };
+
+  test(String key) {
+    return keys[key] ?? '';
+  }
+
+  //bo'sh list ochib qo'yvom  miz
+  List times = [];
+//bu funksiya obyektni listga aylantirib beradi
+  filterTime(data) {
+    data.forEach((key, value) {
+      times.add({"vaqt": key, "soat": value});
+    });
   }
 }
 // CcyNm_UZ: AQSH dollari

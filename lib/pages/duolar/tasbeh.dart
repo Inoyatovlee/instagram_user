@@ -95,6 +95,7 @@ class _TasbehState extends State<Tasbeh> {
   }
 }
 
+// ignore: must_be_immutable
 class TasbehhButton extends StatelessWidget {
   String text;
   Color color;
