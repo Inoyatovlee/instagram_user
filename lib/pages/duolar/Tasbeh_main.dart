@@ -34,6 +34,7 @@ class _TasbehMainState extends State<TasbehMain> {
   }
 }
 
+// ignore: must_be_immutable
 class TasbehButton extends StatelessWidget {
   String title;
   TasbehButton({

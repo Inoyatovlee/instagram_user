@@ -72,17 +72,17 @@ class _HomePageState extends State<HomePage> {
                     Get.to(() => const Curesies());
                   },
                 ),
-                HomeButton(
-                  icon: Icons.attach_money,
-                  text: "Mahsulotlar ",
-                  subtitle: "Eng arzon va hamyonmob mahsulotlar siz uchun",
-                  image: AppImages.daw,
-                  colors: [AppColors.blue, AppColors.pink],
-                  textcolor: Colors.white,
-                  onTap: () {
-                    Get.to(() => const Products());
-                  },
-                ),
+                // HomeButton(
+                //   icon: Icons.attach_money,
+                //   text: "Mahsulotlar ",
+                //   subtitle: "Eng arzon va hamyonmob mahsulotlar siz uchun",
+                //   image: AppImages.daw,
+                //   colors: [AppColors.blue, AppColors.pink],
+                //   textcolor: Colors.white,
+                //   onTap: () {
+                //     Get.to(() => const Products());
+                //   },
+                // ),
               ],
             ),
           ),
